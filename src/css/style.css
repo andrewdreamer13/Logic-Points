@@ -1,0 +1,258 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/../fonts/Georgia.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/../fonts/Georgia-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+nav, footer, header, aside, label {
+  display: block;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+::placeholder {
+  color: inherit;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #383B45;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+}
+
+.loader {
+  display: grid;
+  place-content: center;
+  width: 125px;
+  height: 125px;
+  border: solid 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-left-color: rgba(255, 255, 255, 0.7);
+  animation: load 1.3s linear infinite;
+}
+
+@keyframes load {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* global styles*/
+body {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  background-color: rgb(23, 35, 121);
+  color: rgb(249, 250, 247);
+  padding: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.burger {
+  display: none;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 10;
+}
+.burger:hover .burger__span {
+  background-color: blue;
+}
+
+.burger__span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2.2px;
+  border-radius: 1px;
+  background-color: red;
+  transition: all 0.3s;
+}
+
+.burger__span-one {
+  top: 0;
+}
+
+.burger__span-two {
+  top: 50%;
+}
+
+.burger__span-three {
+  top: 100%;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .untranslate {
+    transform: translateX(0);
+  }
+  .span-one-transform {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+  .span-two-transform {
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+  }
+  .span-three-transform {
+    display: none;
+  }
+}
+/* modals styles*/
+.modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  z-index: -50;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window--visible {
+  z-index: 50;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}/*# sourceMappingURL=style.css.map */

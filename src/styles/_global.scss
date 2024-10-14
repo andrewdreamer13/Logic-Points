@@ -1,12 +1,20 @@
 /* global styles*/
 
 body{
-  font-family: 'Ubuntu';
+  font-family: $font;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
-  color: rgb(22, 46, 228);
-  background-color: rgb(227, 228, 225);
+  letter-spacing: 1px;
+  background-color: rgb(23, 35, 121);
+  color: rgb(249, 250, 247);
+  padding: 20px;
 }
 
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
